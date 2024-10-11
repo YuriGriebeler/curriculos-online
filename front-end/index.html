@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículos Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-file-alt"></i> Currículos Online</h1>
+        <p>Seu currículo pode não ser visto devido à triagem automatizada por sistemas de IA. Um currículo otimizado aumenta suas chances de ser selecionado.</p>
+        
+        <button id="solicitar" class="btn">Solicitar Currículo</button>
+
+        <div id="form-container" style="display:none;">
+            <h2>Preencha os dados abaixo</h2>
+            <form id="curriculo-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" required>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" required>
+
+                <label for="linkedin">LinkedIn:</label>
+                <input type="url" id="linkedin">
+
+                <label for="experiencia">Experiência Profissional:</label>
+                <textarea id="experiencia" rows="4" required></textarea>
+
+                <label for="objetivo">Objetivo Profissional:</label>
+                <textarea id="objetivo" rows="4" required></textarea>
+
+                <label for="curriculo-tipo">Tipo de Currículo:</label>
+                <select id="curriculo-tipo">
+                    <option value="simples">Simples - R$10,00</option>
+                    <option value="elaborado">Elaborado - R$20,00</option>
+                </select>
+
+                <p>Preço: <span id="preco">R$10,00</span></p>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+
+        <div id="resultado" style="display:none; margin-top: 20px;">
+            <h2>Solicitação Recebida</h2>
+            <pre id="dados-solicitacao"></pre>
+            <button id="download-btn" class="btn">Baixar Solicitação</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
